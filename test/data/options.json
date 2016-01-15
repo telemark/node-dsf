@@ -1,0 +1,17 @@
+{
+  "config": {
+    "url": "http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2011-09-26/DetSentraleFolkeregister1_4.wsdl",
+    "namespaceBrukersesjon": "http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd",
+    "distribusjonskanal": "PTP",
+    "systemnavn": "Systemnavn",
+    "brukernavn": "username",
+    "passord": "password"
+  },
+  "method": "hentDetaljer",
+  "query": {
+    "saksref": "your-reference",
+    "foedselsnr": "27105500837",
+    "etternavn": "AMOR",
+    "fornavn": "SIV"
+  }
+}

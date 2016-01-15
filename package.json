@@ -1,0 +1,49 @@
+{
+  "name": "node-dsf",
+  "version": "2.0.1",
+  "description": "Look up data from DSF (Det sentrale folkeregisteret)",
+  "license": "MIT",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "contributors": [
+    {
+      "name": "Jonas Enge",
+      "email": "jonas.enge@t-fk.no",
+      "url": "https://github.com/telemark"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "scripts": {
+    "test": "standard && tap --reporter=spec test/*.js",
+    "coverage": "tap test/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
+    "setup": "npm install && node setup.js"
+  },
+  "keywords": [
+    "Telemark fylkeskommune",
+    "tfk",
+    "dsf",
+    "folkeregister"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/telemark/node-dsf.git"
+  },
+  "bugs": {
+    "url": "http://github.com/telemark/node-dsf/issues"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.6",
+    "standard": "^5.4.1",
+    "tap": "^5.0.1"
+  },
+  "dependencies": {
+  "soap": "git+https://github.com/telemark/node-soap.git"
+  }
+}
