@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/telemark/dsf.svg?branch=master)](https://travis-ci.org/telemark/dsf)
+[![Build Status](https://travis-ci.org/telemark/node-dsf.svg?branch=master)](https://travis-ci.org/telemark/node-dsf)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 # node-dsf
 
