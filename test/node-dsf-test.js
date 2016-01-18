@@ -122,3 +122,23 @@ tap.test('requires param options.query.foedselsnr to exist', function (test) {
     test.done()
   })
 })
+
+tap.test('requires param options.query.etternavn to exist if options.query.fornavn is supplied', function (test) {
+  var options = JSON.parse(JSON.stringify(masterOptions))
+  var expectedErrorMessage = 'Missing required input: options.query.etternavn'
+  options.query.etternavn = false
+  dsf(options, function (error, data) {
+    test.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})
+
+tap.test('requires param options.query.fornavn to exist if options.query.etternavn is supplied', function (test) {
+  var options = JSON.parse(JSON.stringify(masterOptions))
+  var expectedErrorMessage = 'Missing required input: options.query.fornavn'
+  options.query.fornavn = false
+  dsf(options, function (error, data) {
+    test.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})

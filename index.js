@@ -39,6 +39,12 @@ function dsfLookup (options, callback) {
   if (!options.query.foedselsnr) {
     return callback(new Error('Missing required input: options.query.foedselsnr'))
   }
+  if (options.query.etternavn && !options.query.fornavn) {
+    return callback(new Error('Missing required input: options.query.fornavn'))
+  }
+  if (options.query.fornavn && !options.query.etternavn) {
+    return callback(new Error('Missing required input: options.query.etternavn'))
+  }
   createClient(options.config, function (error, dsfClient) {
     if (error) {
       return callback(error, null)
