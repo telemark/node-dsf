@@ -42,7 +42,7 @@ var config = {
   brukernavn: 'brukernavn',
   passord: 'passord'
 }
-var method = 'hentDetaljer'
+var method = 'hentDetaljer' // See supported methods
 var query = {
   saksref: 'your-reference',
   foedselsnr: '26118633333',
@@ -61,4 +61,17 @@ dsfLookup(options, function (error, data) {
   }
   console.log(JSON.stringify(data))
 })
+```
 
+## Supported methods
+
+You must get access to these methods from both skattedirektoratet and evry (see https://www.infotorg.no/)
+
+(Don't be in a hurry)
+
+* hentDetaljer
+* hentForeldre
+* hentRelatertePersoner
+* hentBarn
+* hentEktefelle
+* hentKjernefamilie
