@@ -17,7 +17,7 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=4.2.4"
+    "node": ">=4.4.5"
   },
   "scripts": {
     "test": "standard && tap --reporter=spec test/*.js",
@@ -44,6 +44,6 @@
     "tap": "^5.0.1"
   },
   "dependencies": {
-  "soap": "git+https://github.com/telemark/node-soap.git"
+    "soap": "git+https://github.com/telemark/node-soap.git"
   }
 }
