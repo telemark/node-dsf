@@ -8,8 +8,8 @@ var config = {
   namespaceBrukersesjon: 'http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd',
   distribusjonskanal: 'PTP',
   systemnavn: 'Systemnavn',
-  brukernavn: 'T00UTKF', // Integrasjonsbruker DSF
-  passord: 'TRAMP121'
+  brukernavn: 'brukernavn', // Integrasjonsbruker DSF
+  passord: 'passord'
 }
 var method = 'hentDetaljer'
 var query = {
