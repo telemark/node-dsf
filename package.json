@@ -1,6 +1,6 @@
 {
   "name": "node-dsf",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Look up data from DSF (Det sentrale folkeregisteret)",
   "license": "MIT",
   "author": {
@@ -44,6 +44,6 @@
     "tap": "5.7.2"
   },
   "dependencies": {
-    "soap": "git+https://github.com/telemark/node-soap.git"
+    "soap": "0.15.0"
   }
 }

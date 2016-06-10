@@ -8,15 +8,15 @@ var config = {
   namespaceBrukersesjon: 'http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd',
   distribusjonskanal: 'PTP',
   systemnavn: 'Systemnavn',
-  brukernavn: 'brukernavn',
-  passord: 'passord'
+  brukernavn: 'T00UTKF', // Integrasjonsbruker DSF
+  passord: 'TRAMP121'
 }
 var method = 'hentDetaljer'
 var query = {
   saksref: 'your-reference',
-  foedselsnr: '26118633333',
-  etternavn: 'Enge',
-  fornavn: 'Jonas'
+  foedselsnr: '01010750160',
+  etternavn: 'TOPSTAD',
+  fornavn: 'TOMAS'
 }
 var options = {
   method: method,
