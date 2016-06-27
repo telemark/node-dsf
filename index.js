@@ -53,6 +53,9 @@ function dsfLookup (options, callback) {
         if (err) {
           return callback(err, null)
         } else {
+          if (data.MESSAGE) {
+            return callback(data.MESSAGE, null)
+          }
           return callback(null, data)
         }
       })
