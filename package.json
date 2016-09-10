@@ -1,6 +1,6 @@
 {
   "name": "node-dsf",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Look up data from DSF (Det sentrale folkeregisteret)",
   "license": "MIT",
   "author": {
@@ -23,7 +23,8 @@
     "test": "standard && nsp check && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install && node setup.js"
+    "setup": "npm install && node setup.js",
+    "standard-fix": "standard --fix"
   },
   "keywords": [
     "Telemark fylkeskommune",
