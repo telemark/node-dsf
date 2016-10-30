@@ -1,6 +1,6 @@
 {
   "name": "node-dsf",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Look up data from DSF (Det sentrale folkeregisteret)",
   "license": "MIT",
   "author": {
@@ -17,7 +17,7 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=4.5.0"
+    "node": ">=4.6.1"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
