@@ -1,8 +1,8 @@
 'use strict'
 
 var tap = require('tap')
-var dsf = require('../index')
-var masterOptions = require('./data/options.json')
+var dsf = require('../../index')
+var masterOptions = require('./../data/options.json')
 
 tap.test('It requires an options object to be supplied', function (test) {
   var options = false

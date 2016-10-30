@@ -1,8 +1,8 @@
 'use strict'
 
 var tap = require('tap')
-var createClient = require('../lib/createClient')
-var masterOptions = require('./data/options.json').config
+var createClient = require('../../lib/createClient')
+var masterOptions = require('./../data/options.json').config
 
 tap.test('It requires an options object to be supplied', function (test) {
   var options = false
