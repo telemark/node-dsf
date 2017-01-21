@@ -1,6 +1,6 @@
 {
   "name": "node-dsf",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "description": "Look up data from DSF (Det sentrale folkeregisteret)",
   "license": "MIT",
   "author": {
