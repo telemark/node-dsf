@@ -2,6 +2,8 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 # node-dsf
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/node-dsf.svg)](https://greenkeeper.io/)
+
 Node.js module for looking up data from DSF (Det sentrale folkeregister).
 DSF is register of residents in Norway.
 
