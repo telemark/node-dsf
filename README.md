@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/telemark/node-dsf.svg?branch=master)](https://travis-ci.org/telemark/node-dsf)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-# node-dsf
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/telemark/node-dsf.svg)](https://greenkeeper.io/)
+
+# node-dsf
 
 Node.js module for looking up data from DSF (Det sentrale folkeregister).
 DSF is register of residents in Norway.
@@ -77,3 +77,9 @@ You must get access to these methods from both skattedirektoratet and evry (see 
 * hentBarn
 * hentEktefelle
 * hentKjernefamilie
+
+## License
+
+[MIT](LICENSE)
+
+![Robohash image of node-dsf](https://robots.kebabstudios.party/node-dsf.png "Robohash image of node-dsf")
