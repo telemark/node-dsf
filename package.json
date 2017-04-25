@@ -20,10 +20,10 @@
     "node": ">=4.8.2"
   },
   "scripts": {
-    "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
-    "coverage": "tap test/**/*.js --coverage",
-    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install",
+    "test": "standard && nsp check && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix"
   },
   "keywords": [
@@ -41,10 +41,11 @@
   },
   "homepage": "https://github.com/telemark/node-dsf",
   "devDependencies": {
-    "standard": "10.0.2",
+    "ava": "0.19.1",
     "coveralls": "2.13.0",
     "nsp": "2.6.3",
-    "tap": "10.3.2"
+    "nyc": "10.2.0",
+    "standard": "10.0.2"
   },
   "dependencies": {
     "soap": "0.19.0"
