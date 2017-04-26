@@ -12,30 +12,19 @@ To obtain login credentials and other permissions go to [infotorg.no](https://ww
 ## Installation
 From npm
 
-```sh
-$ npm install node-dsf
-```
-
-From GitHub
-
-```sh
-$ git clone git@github.com:telemark/node-dsf.git
-```
-
-Run the setup script
-
-```sh
-$ npm run setup
+```bash
+$ npm i node-dsf
 ```
 
 ## Usage
 
-```javascript
+### Promises
+```JavaScript
 'use strict'
 
-var dsfLookup = require('node-dsf')
+const dsfLookup = require('node-dsf')
 
-var config = {
+const config = {
   url: 'http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl',
 // PROD  url: 'http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl',
   namespaceBrukersesjon: 'http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd',
@@ -44,14 +33,47 @@ var config = {
   brukernavn: 'brukernavn',
   passord: 'passord'
 }
-var method = 'hentDetaljer' // See supported methods
-var query = {
+const method = 'hentDetaljer' // See supported methods
+const query = {
   saksref: 'your-reference',
   foedselsnr: '26118633333',
   etternavn: 'Enge',
   fornavn: 'Jonas'
 }
-var options = {
+const options = {
+  method: method,
+  config: config,
+  query: query
+}
+
+dsfLookup(options)
+  .then(data => console.log(JSON.stringify(data)))
+  .catch(error => console.error(error))
+```
+
+### Callback
+```JavaScript
+'use strict'
+
+const dsfLookup = require('node-dsf')
+
+const config = {
+  url: 'http://ws-test.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl',
+// PROD  url: 'http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl',
+  namespaceBrukersesjon: 'http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd',
+  distribusjonskanal: 'PTP',
+  systemnavn: 'systemnavn',
+  brukernavn: 'brukernavn',
+  passord: 'passord'
+}
+const method = 'hentDetaljer' // See supported methods
+const query = {
+  saksref: 'your-reference',
+  foedselsnr: '26118633333',
+  etternavn: 'Enge',
+  fornavn: 'Jonas'
+}
+const options = {
   method: method,
   config: config,
   query: query
