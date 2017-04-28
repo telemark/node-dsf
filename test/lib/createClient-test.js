@@ -4,64 +4,78 @@ const test = require('ava')
 const createClient = require('../../lib/createClient')
 const masterOptions = require('./../data/options.json').config
 
-test('It requires an options object to be supplied', t => {
+test('It requires an options object to be supplied', async t => {
   const options = false
   const expectedErrorMessage = 'Missing required input: options object'
-  createClient(options, (error, data) => {
+  try {
+    await createClient(options)
+  } catch (error) {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
-  })
+  }
 })
 
-test('requires param options.url to exist', t => {
+test('requires param options.url to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.url'
   options.url = false
-  createClient(options, (error, data) => {
+  try {
+    await createClient(options)
+  } catch (error) {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
-  })
+  }
 })
 
-test('requires param namespaceBrukersesjon to exist', t => {
+test('requires param namespaceBrukersesjon to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.namespaceBrukersesjon'
   options.namespaceBrukersesjon = false
-  createClient(options, (error, data) => {
+  try {
+    await createClient(options)
+  } catch (error) {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
-  })
+  }
 })
 
-test('requires param options.distribusjonskanal to exist', t => {
+test('requires param options.distribusjonskanal to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.distribusjonskanal'
   options.distribusjonskanal = false
-  createClient(options, (error, data) => {
+  try {
+    await createClient(options)
+  } catch (error) {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
-  })
+  }
 })
 
-test('requires param options.systemnavn to exist', t => {
+test('requires param options.systemnavn to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.systemnavn'
   options.systemnavn = false
-  createClient(options, (error, data) => {
+  try {
+    await createClient(options)
+  } catch (error) {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
-  })
+  }
 })
 
-test('requires param options.brukernavn to exist', t => {
+test('requires param options.brukernavn to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.brukernavn'
   options.brukernavn = false
-  createClient(options, function (error, data) {
+  try {
+    await createClient(options)
+  } catch (error) {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
-  })
+  }
 })
 
-test('requires param options.passord to exist', t => {
+test('requires param options.passord to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.passord'
   options.passord = false
-  createClient(options, (error, data) => {
+  try {
+    await createClient(options)
+  } catch (error) {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
-  })
+  }
 })

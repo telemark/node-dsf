@@ -7,16 +7,16 @@ const config = {
 // PROD  url: 'http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl',
   namespaceBrukersesjon: 'http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd',
   distribusjonskanal: 'PTP',
-  systemnavn: 'systemnavn',
-  brukernavn: 'brukernavn',
+  systemnavn: 'Systemnavn',
+  brukernavn: 'brukernavn', // Integrasjonsbruker DSF
   passord: 'passord'
 }
-const method = 'hentDetaljer' // See supported methods
+const method = 'hentDetaljer'
 const query = {
   saksref: 'your-reference',
-  foedselsnr: '26118633333',
-  etternavn: 'Enge',
-  fornavn: 'Jonas'
+  foedselsnr: '01010750160',
+  etternavn: 'TOPSTAD',
+  fornavn: 'TOMAS'
 }
 const options = {
   method: method,
@@ -24,9 +24,6 @@ const options = {
   query: query
 }
 
-dsfLookup(options, function (error, data) {
-  if (error) {
-    console.error(error)
-  }
-  console.log(JSON.stringify(data))
-})
+dsfLookup(options)
+ .then(data => console.log(JSON.stringify(data)))
+  .catch(error => console.error(error))

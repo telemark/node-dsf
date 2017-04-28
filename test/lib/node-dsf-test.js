@@ -4,7 +4,7 @@ const test = require('ava')
 const dsf = require('../../index')
 let masterOptions = require('./../data/options.json')
 
-test('It requires an options object to be supplied', t => {
+test('It requires an options object to be supplied', async t => {
   const options = false
   const expectedErrorMessage = 'Missing required input: options object'
   dsf(options, (error, data) => {
@@ -12,7 +12,7 @@ test('It requires an options object to be supplied', t => {
   })
 })
 
-test('requires param options.config to exist', t => {
+test('requires param options.config to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.config'
   options.config = false
@@ -21,7 +21,7 @@ test('requires param options.config to exist', t => {
   })
 })
 
-test('requires param options.config.url to exist', t => {
+test('requires param options.config.url to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.config.url'
   options.config.url = false
@@ -30,7 +30,7 @@ test('requires param options.config.url to exist', t => {
   })
 })
 
-test('requires param options.config.namespaceBrukersesjon to exist', t => {
+test('requires param options.config.namespaceBrukersesjon to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.config.namespaceBrukersesjon'
   options.config.namespaceBrukersesjon = false
@@ -39,7 +39,7 @@ test('requires param options.config.namespaceBrukersesjon to exist', t => {
   })
 })
 
-test('requires param options.config.distribusjonskanal to exist', t => {
+test('requires param options.config.distribusjonskanal to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.config.distribusjonskanal'
   options.config.distribusjonskanal = false
@@ -48,7 +48,7 @@ test('requires param options.config.distribusjonskanal to exist', t => {
   })
 })
 
-test('requires param options.config.systemnavn to exist', t => {
+test('requires param options.config.systemnavn to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.config.systemnavn'
   options.config.systemnavn = false
@@ -57,7 +57,7 @@ test('requires param options.config.systemnavn to exist', t => {
   })
 })
 
-test('requires param options.config.brukernavn to exist', t => {
+test('requires param options.config.brukernavn to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.config.brukernavn'
   options.config.brukernavn = false
@@ -66,7 +66,7 @@ test('requires param options.config.brukernavn to exist', t => {
   })
 })
 
-test('requires param options.config.passord to exist', t => {
+test('requires param options.config.passord to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.config.passord'
   options.config.passord = false
@@ -75,7 +75,7 @@ test('requires param options.config.passord to exist', t => {
   })
 })
 
-test('requires param options.method to exist', t => {
+test('requires param options.method to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.method'
   options.method = false
@@ -84,7 +84,7 @@ test('requires param options.method to exist', t => {
   })
 })
 
-test('requires param options.query to exist', t => {
+test('requires param options.query to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.query'
   options.query = false
@@ -93,7 +93,7 @@ test('requires param options.query to exist', t => {
   })
 })
 
-test('requires param options.query.saksref to exist', t => {
+test('requires param options.query.saksref to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.query.saksref'
   options.query.saksref = false
@@ -102,7 +102,7 @@ test('requires param options.query.saksref to exist', t => {
   })
 })
 
-test('requires param options.query.foedselsnr to exist', t => {
+test('requires param options.query.foedselsnr to exist', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.query.foedselsnr'
   options.query.foedselsnr = false
@@ -111,7 +111,7 @@ test('requires param options.query.foedselsnr to exist', t => {
   })
 })
 
-test('requires param options.query.etternavn to exist if options.query.fornavn is supplied', t => {
+test('requires param options.query.etternavn to exist if options.query.fornavn is supplied', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.query.etternavn'
   options.query.etternavn = false
@@ -120,7 +120,7 @@ test('requires param options.query.etternavn to exist if options.query.fornavn i
   })
 })
 
-test('requires param options.query.fornavn to exist if options.query.etternavn is supplied', t => {
+test('requires param options.query.fornavn to exist if options.query.etternavn is supplied', async t => {
   let options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.query.fornavn'
   options.query.fornavn = false
