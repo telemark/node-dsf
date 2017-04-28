@@ -6,17 +6,9 @@ module.exports = (options, callback) => {
   return new Promise(async (resolve, reject) => {
     try {
       const data = await dsf(options)
-      if (callback) {
-        callback(null, data)
-      } else {
-        resolve(data)
-      }
+      callback ? callback(null, data) : resolve(data)
     } catch (err) {
-      if (callback) {
-        callback(err)
-      } else {
-        reject(err)
-      }
+      callback ? callback(err) : reject(err)
     }
   })
 }
