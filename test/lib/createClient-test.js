@@ -1,5 +1,3 @@
-'use strict'
-
 const test = require('ava')
 const createClient = require('../../lib/createClient')
 const masterOptions = require('./../data/options.json').config

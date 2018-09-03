@@ -1,5 +1,3 @@
-'use strict'
-
 const test = require('ava')
 const dsf = require('../../index')
 let masterOptions = require('./../data/options.json')

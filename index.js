@@ -1,5 +1,3 @@
-'use strict'
-
 const dsf = require('./lib/dsf')
 
 module.exports = (options, callback) => {
