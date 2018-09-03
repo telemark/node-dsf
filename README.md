@@ -38,9 +38,9 @@ const query = {
   fornavn: 'Jonas'
 }
 const options = {
-  method: method,
-  config: config,
-  query: query
+  method,
+  config,
+  query
 }
 
 dsfLookup(options)
@@ -69,9 +69,9 @@ const query = {
   fornavn: 'Jonas'
 }
 const options = {
-  method: method,
-  config: config,
-  query: query
+  method,
+  config,
+  query
 }
 
 dsfLookup(options, function (error, data) {
