@@ -19,8 +19,6 @@ $ npm i node-dsf
 
 ### Promises
 ```JavaScript
-'use strict'
-
 const dsfLookup = require('node-dsf')
 
 const config = {
@@ -52,8 +50,6 @@ dsfLookup(options)
 
 ### Callback
 ```JavaScript
-'use strict'
-
 const dsfLookup = require('node-dsf')
 
 const config = {
