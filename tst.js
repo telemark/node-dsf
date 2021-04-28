@@ -12,7 +12,8 @@ const config = {
 const method = 'hentDetaljer'
 const query = {
   saksref: 'your-reference',
-  foedselsnr: '01010750160',
+  foedselsnr: '01010750160', // comment out the one not needed
+  foedselsdato: "010107", // comment out the one not needed
   etternavn: 'TOPSTAD',
   fornavn: 'TOMAS'
 }
