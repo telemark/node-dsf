@@ -100,10 +100,19 @@ test('requires param options.query.saksref to exist', t => {
   })
 })
 
-test('requires param options.query.foedselsnr to exist', t => {
+test('requires param options.query.foedselsnr to exist if options.query.foedselsdato is not supplied', t => {
   const options = JSON.parse(JSON.stringify(masterOptions))
-  const expectedErrorMessage = 'Missing required input: options.query.foedselsnr'
-  options.query.foedselsnr = false
+  const expectedErrorMessage = 'Missing one of the required inputs: options.query.foedselsnr || options.query.foedselsdato'
+  delete options.query.foedselsdato
+  return dsf(options).catch(error => {
+    t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
+  })
+})
+
+test('requires param options.query.foedselsdato to exist if options.query.foedselsnr is not supplied', t => {
+  const options = JSON.parse(JSON.stringify(masterOptions))
+  const expectedErrorMessage = 'Missing one of the required inputs: options.query.foedselsnr || options.query.foedselsdato'
+  delete options.query.foedselsnr
   return dsf(options).catch(error => {
     t.deepEqual(error.message, expectedErrorMessage, expectedErrorMessage)
   })

@@ -33,7 +33,8 @@ const config = {
 const method = 'hentDetaljer' // See supported methods
 const query = {
   saksref: 'your-reference',
-  foedselsnr: '26118633333',
+  foedselsnr: '26118633333', // requires this or foedselsdato
+  foedselsdato: '261186', // requires this or foedselsnr
   etternavn: 'Enge',
   fornavn: 'Jonas'
 }
@@ -64,7 +65,8 @@ const config = {
 const method = 'hentDetaljer' // See supported methods
 const query = {
   saksref: 'your-reference',
-  foedselsnr: '26118633333',
+  foedselsnr: '26118633333', // requires this or foedselsdato
+  foedselsdato: '261186', // requires this or foedselsnr
   etternavn: 'Enge',
   fornavn: 'Jonas'
 }
