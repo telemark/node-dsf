@@ -5,13 +5,13 @@ const config = {
   // PROD  url: 'http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.wsdl',
   namespaceBrukersesjon: 'http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd',
   distribusjonskanal: 'PTP',
-  systemnavn: 'Systemnavn',
-  brukernavn: 'brukernavn', // Integrasjonsbruker DSF
-  passord: 'passord'
+  systemnavn: 'minelev',
+  brukernavn: 'T00UTKF', // Integrasjonsbruker DSF
+  passord: 'TRAMP121'
 }
 const method = 'hentDetaljer'
 const query = {
-  saksref: 'your-reference',
+  saksref: 'minelev',
   foedselsnr: '01010750160', // comment out the one not needed
   foedselsdato: "010107", // comment out the one not needed
   etternavn: 'TOPSTAD',
