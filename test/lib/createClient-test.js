@@ -13,7 +13,7 @@ test('It requires an options object to be supplied', async t => {
 })
 
 test('requires param options.url to exist', async t => {
-  let options = JSON.parse(JSON.stringify(masterOptions))
+  const options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.url'
   options.url = false
   try {
@@ -24,7 +24,7 @@ test('requires param options.url to exist', async t => {
 })
 
 test('requires param namespaceBrukersesjon to exist', async t => {
-  let options = JSON.parse(JSON.stringify(masterOptions))
+  const options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.namespaceBrukersesjon'
   options.namespaceBrukersesjon = false
   try {
@@ -35,7 +35,7 @@ test('requires param namespaceBrukersesjon to exist', async t => {
 })
 
 test('requires param options.distribusjonskanal to exist', async t => {
-  let options = JSON.parse(JSON.stringify(masterOptions))
+  const options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.distribusjonskanal'
   options.distribusjonskanal = false
   try {
@@ -46,7 +46,7 @@ test('requires param options.distribusjonskanal to exist', async t => {
 })
 
 test('requires param options.systemnavn to exist', async t => {
-  let options = JSON.parse(JSON.stringify(masterOptions))
+  const options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.systemnavn'
   options.systemnavn = false
   try {
@@ -57,7 +57,7 @@ test('requires param options.systemnavn to exist', async t => {
 })
 
 test('requires param options.brukernavn to exist', async t => {
-  let options = JSON.parse(JSON.stringify(masterOptions))
+  const options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.brukernavn'
   options.brukernavn = false
   try {
@@ -68,7 +68,7 @@ test('requires param options.brukernavn to exist', async t => {
 })
 
 test('requires param options.passord to exist', async t => {
-  let options = JSON.parse(JSON.stringify(masterOptions))
+  const options = JSON.parse(JSON.stringify(masterOptions))
   const expectedErrorMessage = 'Missing required input: options.passord'
   options.passord = false
   try {
