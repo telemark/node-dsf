@@ -89,14 +89,18 @@ You must get access to these methods from both skattedirektoratet and evry (see 
 (Don't be in a hurry)
 
 * hentDetaljer
+* hentDetaljer_v2
 * hentForeldre
+* hentForeldre_v2
 * hentRelatertePersoner
+* hentRelatertePersoner_v2
 * hentBarn
+* hentBarn_v2
 * hentEktefelle
+* hentEktefelle_v2
 * hentKjernefamilie
+* hentKjernefamilie_v2
 
 ## License
 
 [MIT](LICENSE)
-
-![Robohash image of node-dsf](https://robots.kebabstudios.party/node-dsf.png "Robohash image of node-dsf")
