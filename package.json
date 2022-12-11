@@ -52,6 +52,6 @@
     "standard": "17.0.0"
   },
   "dependencies": {
-    "soap": "0.37.0"
+    "soap": "1.0.0"
   }
 }
